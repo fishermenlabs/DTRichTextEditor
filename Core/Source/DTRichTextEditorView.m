@@ -1870,6 +1870,11 @@ typedef enum
 		return;
 	}
 	
+    if ([self.editorViewDelegate respondsToSelector:@selector(editorView:willCopyRange:)]) {
+        [self.editorViewDelegate editorView:self willCopyRange:[_selectedTextRange NSRangeValue]];
+        return;
+    }
+    
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	
 	NSRange selectedRange = [_selectedTextRange NSRangeValue];
