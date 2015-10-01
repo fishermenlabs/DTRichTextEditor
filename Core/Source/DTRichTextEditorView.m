@@ -1871,7 +1871,7 @@ typedef enum
 	}
 	
     if ([self.editorViewDelegate respondsToSelector:@selector(editorView:willCopyRange:)]) {
-        [self.editorViewDelegate editorView:self willCopyRange:[_selectedTextRange NSRangeValue]];
+        [self.editorViewDelegate editorView:self willCopyRange:_selectedTextRange];
         return;
     }
     

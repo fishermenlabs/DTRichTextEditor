@@ -279,7 +279,7 @@ extern NSString * const DTRichTextEditorTextDidEndEditingNotification;
  */
 - (NSAttributedString *)editorView:(DTRichTextEditorView *)editorView willPasteText:(NSAttributedString *)text inRange:(NSRange)range;
 
-- (void)editorView:(DTRichTextEditorView *)editorView willCopyRange:(NSRange)range;
+- (void)editorView:(DTRichTextEditorView *)editorView willCopyRange:(UITextRange *)range;
 
 /**
  Tells the delegate that the text or attributes in the specified editor view were changed by the user
