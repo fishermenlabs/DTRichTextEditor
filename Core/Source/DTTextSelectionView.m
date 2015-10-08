@@ -387,6 +387,11 @@
 		_dragHandleLeft.image = [UIImage imageNamed:@"DTLoupe.bundle/kb-drag-dot.png"];
 		_dragHandleLeft.contentMode = UIViewContentModeCenter;
 		_dragHandleLeft.hidden = YES;
+        
+        if ([self respondsToSelector:@selector(tintColor)]) {
+            _dragHandleLeft.image = [_dragHandleLeft.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            _dragHandleLeft.tintColor = self.tintColor;
+        }
 		
 		[self.superview addSubview:_dragHandleLeft];
 	}
@@ -403,6 +408,11 @@
 		_dragHandleRight.image = [UIImage imageNamed:@"DTLoupe.bundle/kb-drag-dot.png"];
 		_dragHandleRight.contentMode = UIViewContentModeCenter;
 		_dragHandleRight.hidden = YES;
+        
+        if ([self respondsToSelector:@selector(tintColor)]) {
+            _dragHandleRight.image = [_dragHandleRight.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            _dragHandleRight.tintColor = self.tintColor;
+        }
 		
 		[self.superview addSubview:_dragHandleRight];
 	}
