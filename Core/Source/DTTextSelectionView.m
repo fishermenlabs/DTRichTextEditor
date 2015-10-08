@@ -321,7 +321,7 @@
 		}
 		
 		_dragHandleLeft.center = CGPointMake(CGRectGetMidX(firstRect), firstRect.origin.y - 5.0);
-		_dragHandleRight.center = CGPointMake(CGRectGetMidX(lastRect), CGRectGetMaxY(lastRect) + 9.0);
+		_dragHandleRight.center = CGPointMake(CGRectGetMidX(lastRect), CGRectGetMaxY(lastRect) + 5.0);
 		
 		
 		if (animated)
