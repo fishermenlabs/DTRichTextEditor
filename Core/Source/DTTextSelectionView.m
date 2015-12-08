@@ -385,6 +385,10 @@
 		_dragHandleLeft = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
 		_dragHandleLeft.userInteractionEnabled = NO;
 		_dragHandleLeft.image = [UIImage imageNamed:@"DTLoupe.bundle/kb-drag-dot.png"];
+        
+        //Check if DTLoupe is a framework
+        if (_dragHandleLeft.image == nil) _dragHandleLeft.image = [UIImage imageNamed:@"Frameworks/DTLoupe.framework/DTLoupe.bundle/kb-drag-dot.png"];
+        
 		_dragHandleLeft.contentMode = UIViewContentModeCenter;
 		_dragHandleLeft.hidden = YES;
         
@@ -406,6 +410,10 @@
 		_dragHandleRight = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
 		_dragHandleRight.userInteractionEnabled = NO;
 		_dragHandleRight.image = [UIImage imageNamed:@"DTLoupe.bundle/kb-drag-dot.png"];
+        
+        //Check if DTLoupe is a framework
+        if (_dragHandleRight.image == nil) _dragHandleRight.image = [UIImage imageNamed:@"Frameworks/DTLoupe.framework/DTLoupe.bundle/kb-drag-dot.png"];
+        
 		_dragHandleRight.contentMode = UIViewContentModeCenter;
 		_dragHandleRight.hidden = YES;
         
