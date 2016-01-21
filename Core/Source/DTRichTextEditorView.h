@@ -199,6 +199,11 @@ extern NSString * const DTRichTextEditorTextDidEndEditingNotification;
 @property (nonatomic, assign, readonly, getter = isEditing) BOOL editing;
 
 /**
+ Determines whether the content inset should adjust itself to accommodate the autocorrection prompt.  Useful since iOS 8 added the QuickType toolbar which takes the place of the autocorrection prompt when in use.
+ */
+@property (nonatomic, assign) BOOL adjustContentInsetForAutocorrectionPrompt;
+
+/**
  If this property is `YES` then all typed enters are replaced with the Line Feed (LF) character.
  
  @warning This causes all text to end up in a single paragraph and all paragraph-level styles are going to affect all of the text. It therefore severely affects the display performance. We recommend you don't activate this if you don't want spaces between paragraphs but rather set the paragraph spacing to zero via a custom style set via textDefaults.

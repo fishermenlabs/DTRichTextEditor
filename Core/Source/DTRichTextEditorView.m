@@ -3326,8 +3326,8 @@ typedef enum
 {
 	if ([NSStringFromClass([view class]) rangeOfString:@"InlinePrompt"].length)
 	{
-        //iOS 8 has the quick type keyboard that does autocorrect, so we don't need the prompt view
-        if (floor(NSFoundationVersionNumber) >= NSFoundationVersionNumber_iOS_8_0) {
+        //Determine if the cotent insets should change for the autocorrection prompt
+        if (!_adjustContentInsetForAutocorrectionPrompt) {
             _autocorrectionPromptView = nil;
         }
         else {
